@@ -56,7 +56,7 @@
             bindings = <
 &kp TAB    &kp EXCL  &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &kp MINUS   &kp UNDERSCORE     &trans            &trans     &trans    &kp DELETE
 &kp LALT   &trans    &trans       &kp ASTERISK  &kp AMPERSAND  &kp CARET      &kp EQUAL   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp COLON  &kp SEMI  &trans
-&N0        &N5       &N4          &N3           &N2            &kp N1         &kp PLUS    &N6                &N7               &N8        &N9       &N0
+&kp N0     &kp N5    &kp N4       &kp N3        &kp N2         &kp N1         &kp PLUS    &kp N6             &kp N7            &kp N8     &kp N9    &kp N0
                                   &trans        &none          &trans         &trans      &mo 3              &kp RALT
             >;
         };
@@ -79,7 +79,7 @@
         layer_3 {
             bindings = <
 &soft_off    &trans        &msc MOVE_LEFT        &mmv MOVE_UP        &msc MOVE_RIGHT        &msc MOVE_UP      &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader  &trans        &mmv MOVE_LEFT        &mmv MOVE_DOWN      &MOVE_RIGHT            &msc MOVE_DOWN    &out OUT_TOG  &mkp LCLK   &mkp RCLCK  &trans  &trans  &bootloader
+&bootloader  &trans        &mmv MOVE_LEFT        &mmv MOVE_DOWN      &mmv MOVE_RIGHT        &msc MOVE_DOWN    &out OUT_TOG  &mkp LCLK   &mkp RCLCK  &trans  &trans  &bootloader
 &bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3          &bt BT_SEL 2        &bt BT_SEL 1           &bt BT_SEL 0      &trans  &trans  &trans  &trans  &trans  &trans
                                                  &trans              &trans                 &out OUT_TOG      &trans  &trans  &trans
             >;
