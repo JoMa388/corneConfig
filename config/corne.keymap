@@ -69,7 +69,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &trans  &trans  &kp LPAR          &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp F13       &kp F14   &kp K_MUTE    &kp K_VOLUME_UP  &kp K_VOL_DN  &kp LC(BACKSPACE)
+&kp GRAVE  &trans  &trans  &kp LPAR          &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp F13       &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &kp LC(BACKSPACE)
 &kp TILDE  &trans  &trans  &kp LEFT_BRACE    &kp RIGHT_BRACE        &kp PIPE          &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT        &trans        &trans
 &kp LSHFT  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp BACKSLASH     &left_window  &kp F19   &kp F18       &right_window    &trans        &trans
                            &kp LGUI          &mo 3                  &kp SPACE         &kp RET       &trans    &kp RALT
@@ -78,10 +78,10 @@
 
         layer_3 {
             bindings = <
-&soft_off    &trans        &trans        &mmv MOVE_UP        &trans                  &trans        &trans     &trans     &trans  &trans  &trans  &trans
-&bootloader  &trans        &mmv MOVE_LEFT&mmv MOVE_DOWN      &mmv MOVE_RIGHT         &out OUT_TOG  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans
-&bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans        &trans     &trans     &trans  &trans  &bootloader
-                                         &trans        &trans        &out OUT_TOG    &trans        &trans     &trans
+&soft_off    &trans        &trans        &mmv MOVE_UP        &trans                  &msc MOVE_UP       &trans     &trans     &trans  &trans  &trans  &trans
+&bootloader  &trans        &mmv MOVE_LEFT&mmv MOVE_DOWN      &mmv MOVE_RIGHT         &msc MOVE_DOWN     &out OUT_TOG  &mkp LCLK  &mkp RCLK  &trans  &trans  &bootloader
+&bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans             &trans     &trans     &trans  &trans  &trans
+                                         &trans        &trans        &out OUT_TOG                       &trans     &trans     &trans
             >;
         };
 
