@@ -50,17 +50,17 @@
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            // | 0    |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &kp MINUS  &kp UNDERSCORE     &trans            &trans     &trans    &kp DELETE
-&kt LALT   &trans    &trans       &kp ASTERISK  &kp AMPERSAND  &kp CARET      &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp COLON  &kp SEMI  &trans
-&kp LSHFT  &trans    &trans       &trans        &trans         &kp LSHIFT     &trans     &trans             &trans            &trans     &trans    &trans
-                                  &trans        &trans         &trans         &kp RET    &mo 3              &kp RALT
+&kp TAB    &kp EXCL  &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &kp MINUS   &kp UNDERSCORE     &trans            &trans     &trans    &kp DELETE
+&kp LALT   &trans    &trans       &kp ASTERISK  &kp AMPERSAND  &kp CARET      &kp EQUAL   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp COLON  &kp SEMI  &trans
+&N0        &N5       &N4          &N3           &N2            &kp N1         &kp PLUS    &N6                &N7               &N8        &N9       &N0
+                                  &trans        &none          &trans         &trans      &mo 3              &kp RALT
             >;
         };
-
+.
         raise_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
@@ -69,7 +69,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &trans  &trans  &kp LPAR          &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp F13       &kp F14   &kp K_MUTE    &kp K_VOLUME_UP  &kp K_VOL_DN  &kp LC(BACKSPACE)
+&kp GRAVE  &trans  &trans  &kp LPAR          &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp F13       &kp F14   &kp C_MUTE    &kp C_VOL_UP     &kp C_VOL_DN  &kp LC(BACKSPACE)
 &kp TILDE  &trans  &trans  &kp LEFT_BRACE    &kp RIGHT_BRACE        &kp PIPE          &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT        &trans        &trans
 &kp LSHFT  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp BACKSLASH     &left_window  &kp F19   &kp F18       &right_window    &trans        &trans
                            &kp LGUI          &mo 3                  &kp SPACE         &kp RET       &trans    &kp RALT
@@ -78,10 +78,10 @@
 
         layer_3 {
             bindings = <
-&soft_off    &trans        &trans        &mmv MOVE_UP        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans  &trans  &trans  &trans  &trans  &bootloader
-                                         &trans        &trans        &out OUT_TOG    &trans  &trans  &trans
+&soft_off    &trans        &msc MOVE_LEFT        &mmv MOVE_UP        &msc MOVE_RIGHT        &msc MOVE_UP      &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &trans        &mmv MOVE_LEFT        &mmv MOVE_DOWN      &MOVE_RIGHT            &msc MOVE_DOWN    &out OUT_TOG  &mkp LCLK   &mkp RCLCK  &trans  &trans  &bootloader
+&bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3          &bt BT_SEL 2        &bt BT_SEL 1           &bt BT_SEL 0      &trans  &trans  &trans  &trans  &trans  &trans
+                                                 &trans              &trans                 &out OUT_TOG      &trans  &trans  &trans
             >;
         };
 
