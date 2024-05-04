@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmk
-      revision: mouse-ftc
+      revision: feat/pointers-mouse-move-scroll
       import: app/west.yml
   self:
     path: config
