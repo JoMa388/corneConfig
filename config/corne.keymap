@@ -78,8 +78,8 @@
 
         layer_3 {
             bindings = <
-&soft_off    &trans        &msc MOVE_LEFT        &mmv MOVE_UP        &msc MOVE_RIGHT        &msc MOVE_UP      &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader  &trans        &mmv MOVE_LEFT        &mmv MOVE_DOWN      &mmv MOVE_RIGHT        &msc MOVE_DOWN    &out OUT_TOG  &mkp LCLK   &mkp RCLCK  &trans  &trans  &bootloader
+&soft_off    &trans        &trans        &mmv MOVE_UP        &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &trans        &mmv MOVE_LEFT        &mmv MOVE_DOWN      &mmv MOVE_RIGHT        &trans    &out OUT_TOG  &mkp LCLK   &mkp RCLCK  &trans  &trans  &bootloader
 &bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3          &bt BT_SEL 2        &bt BT_SEL 1           &bt BT_SEL 0      &trans  &trans  &trans  &trans  &trans  &trans
                                                  &trans              &trans                 &out OUT_TOG      &trans  &trans  &trans
             >;
