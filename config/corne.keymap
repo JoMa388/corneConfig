@@ -7,81 +7,55 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
+
 / {
-    macros {
-        left_window: left_window {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LS(LG(LEFT))>;
-            label = "LEFT_WINDOW";
-        };
-
-        right_window: right_window {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LS(LG(RIGHT))>;
-            label = "RIGHT_WINDOW";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-        bindings = <
+            bindings = <
 &kp TAB        &kp Q  &kp W  &kp F     &kp P      &kp B        &kp J       &kp L  &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
-&mt LCTRL ESC  &kp A  &kp R  &kp S     &kp T      &kp G        &kp M       &kp N  &kp E      &kp I    &kp O          &kp RET
-&kp LSHFT      &kp Z  &kp X  &kp C     &kp D      &kp V        &kp K       &kp H  &kp COMMA  &kp DOT  &kp FSLH       &mo 4
-                             &kp LGUI  &lt 1 RET  &kp SPACE    &kp LSHIFT  &mo 2  &mo 5
+&mt LCTRL ESC  &kp A  &kp R  &kp S     &kp T      &kp G        &kp M       &kp N  &kp E      &kp I    &kp O          &kp SQT
+&kp LSHFT      &kp Z  &kp X  &kp C     &kp D      &kp V        &kp K       &kp H  &kp COMMA  &kp DOT  &kp FSLH       &kp ENTER
+                             &kp LGUI  &lt 1 RET  &kp SPACE    &kp LSHIFT  &mo 0  &mo 3
             >;
         };
 
-        lower_layer {
-        bindings = <
-&kp TAB    &kp EXCL  &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &kp MINUS  &kp UNDERSCORE     &trans            &trans     &trans    &kp DELETE
-&kp LALT   &trans    &trans       &kp ASTERISK  &kp AMPERSAND  &kp CARET      &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp COLON  &kp SEMI  &trans
-&kp LSHFT  &trans    &trans       &trans        &trans         &kp LSHIFT     &trans     &trans             &trans            &trans     &trans    &trans
-                                  &trans        &trans         &trans         &kp RET    &mo 3              &kp RALT
-            >;
-        };
-
-        raise_layer {
-        bindings = <
-&kp GRAVE  &trans  &trans  &kp LPAR          &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp F13       &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &kp LC(BACKSPACE)
-&kp TILDE  &trans  &trans  &kp LEFT_BRACE    &kp RIGHT_BRACE        &kp PIPE          &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT        &trans        &trans
-&kp LSHFT  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp BACKSLASH     &left_window  &kp F19   &kp F18       &right_window    &trans        &trans
-                           &kp LGUI          &mo 3                  &kp SPACE         &kp RET       &trans    &kp RALT
-            >;
-        };
-
-        layer_3 {
+        symbol_layer {
             bindings = <
-&soft_off    &trans        &trans        &mmv MOVE_UP        &trans                  &msc MOVE_UP       &trans     &trans     &trans  &trans  &trans  &trans
-&bootloader  &trans        &mmv MOVE_LEFT&mmv MOVE_DOWN      &mmv MOVE_RIGHT         &msc MOVE_DOWN     &out OUT_TOG  &mkp LCLK  &mkp RCLK  &trans  &trans  &bootloader
-&bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans             &trans     &trans     &trans  &trans  &trans
-                                         &trans        &trans        &out OUT_TOG                       &trans     &trans     &trans
+&kp TAB    &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &trans   &trans  &trans  &trans  &trans  &kp DELETE
+&kp LALT   &kp LC(A)  &kp LC(S)    &kp ASTERISK  &kp AMPERSAND  &kp CARET      &trans   &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp LC(Z)  &kp LC(X)    &kp LC(C)     &trans         &kp LC(V)      &trans   &trans  &trans  &trans  &trans  &trans
+                                   &trans        &none          &trans         &kp RET  &mo 4   &trans
             >;
         };
 
-        numpad {
+        number_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS        &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp KP_DOT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_N6        &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans      &trans
-                        &trans  &trans  &trans    &trans           &trans           &trans
+&trans  &trans     &trans         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER    &kp MINUS        &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp KP_DOT       &kp LC(BACKSPACE)
+&trans  &kp TILDE  &kp PIPE       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EXCL     &kp PLUS         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_N6        &kp EQUAL        &trans
+&trans  &kp GRAVE  &kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans       &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK  &trans
+                                  &trans                &mo 4                  &trans       &trans           &none            &trans
             >;
         };
 
         Macro_Layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans             &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F13           &kp F14           &kp C_MUTE        &kp C_VOL_UP  &kp C_VOL_DN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT          &kp DOWN          &kp UP_ARROW      &kp RIGHT     &kp F18       &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(LG(LEFT))  &kp LG(LS(DOWN))  &kp LG(UP_ARROW)  &kp F20       &kp F19       &trans
+                        &trans  &trans  &trans    &trans            &trans            &trans
+            >;
+        };
+
+        mouse_layer {
+            bindings = <
+&soft_off    &trans        &trans          &mmv MOVE_UP    &trans           &msc MOVE_UP      &trans        &trans     &trans     &trans  &trans  &trans
+&bootloader  &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_DOWN    &out OUT_TOG  &mkp LCLK  &mkp RCLK  &trans  &trans  &bootloader
+&bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1     &bt BT_SEL 0      &trans        &trans     &trans     &trans  &trans  &trans
+                                           &trans          &trans           &out OUT_TOG      &trans        &trans     &trans
             >;
         };
     };
