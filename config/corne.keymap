@@ -32,13 +32,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
-            bindings = <
+        bindings = <
 &kp TAB        &kp Q  &kp W  &kp F     &kp P      &kp B        &kp J       &kp L  &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
 &mt LCTRL ESC  &kp A  &kp R  &kp S     &kp T      &kp G        &kp M       &kp N  &kp E      &kp I    &kp O          &kp RET
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp D      &kp V        &kp K       &kp H  &kp COMMA  &kp DOT  &kp FSLH       &mo 4
@@ -47,13 +41,7 @@
         };
 
         lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
+        bindings = <
 &kp TAB    &kp EXCL  &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &kp MINUS  &kp UNDERSCORE     &trans            &trans     &trans    &kp DELETE
 &kp LALT   &trans    &trans       &kp ASTERISK  &kp AMPERSAND  &kp CARET      &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp COLON  &kp SEMI  &trans
 &kp LSHFT  &trans    &trans       &trans        &trans         &kp LSHIFT     &trans     &trans             &trans            &trans     &trans    &trans
@@ -62,13 +50,7 @@
         };
 
         raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
+        bindings = <
 &kp GRAVE  &trans  &trans  &kp LPAR          &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp F13       &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &kp LC(BACKSPACE)
 &kp TILDE  &trans  &trans  &kp LEFT_BRACE    &kp RIGHT_BRACE        &kp PIPE          &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT        &trans        &trans
 &kp LSHFT  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp BACKSLASH     &left_window  &kp F19   &kp F18       &right_window    &trans        &trans
@@ -88,15 +70,15 @@
         numpad {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS        &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp KP_DOT  &trans
-&trans  &trans  &mmv MOVE_X(-500)  &trans  &trans  &trans    &kp EQUAL        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_N6        &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_N6        &trans      &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans      &trans
-                        &mmv MOVE_X(3)  &mmv MOVE_X(2)  &mmv MOVE_X(1)    &trans           &trans           &trans
+                        &trans  &trans  &trans    &trans           &trans           &trans
             >;
         };
 
         Macro_Layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_TOG    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans             &trans  &trans  &trans
