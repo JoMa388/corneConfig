@@ -25,19 +25,6 @@
             label = "MUTE_BT1";
         };
 
-        Lock_Screen: Lock_Screen {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&out OUT_BLE>,
-                <&macro_wait_time 20>,
-                <&kp C_POWER>,
-                <&macro_wait_time 20>,
-                <&out OUT_USB>;
-
-            label = "LOCK_SCREEN";
-        };
-
         home_screen: home_screen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -59,26 +46,26 @@
             label = "SPOTLIGHT";
         };
 
-        globe_left: globe_left {
+        prev_app: globe_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp LC(LEFT)>,
+                <&kp GLOBE &kp LEFT>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
             label = "GLOBE_LEFT";
         };
 
-        globe_right: globe_right {
+        next_app: globe_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp LC(RIGHT)>,
+                <&kp GLOBE &kp RIGHT_ARROW>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
@@ -91,7 +78,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp LC(UP_ARROW)>,
+                <&kp GLOBE &kp UP>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
@@ -104,7 +91,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp LC(DOWN)>,
+                <&kp GLOBE &kp DOWN>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
@@ -136,6 +123,13 @@
 
             label = "VOL_DOWN";
         };
+
+        lock_screen: lock_screen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(Q))>;
+            label = "LOCK_SCREEN";
+        };
     };
 
     keymap {
@@ -152,10 +146,10 @@
 
         symbol_layer {
             bindings = <
-&kp TAB    &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &trans       &trans       &Mute_BT1  &vol_up       &vol_down  &kp DELETE
-&kp LALT   &kp LC(A)  &kp LC(S)    &kp ASTERISK  &kp AMPERSAND  &kp CARET      &globe_left  &globe_down  &globe_up  &globe_right  &trans     &home_screen
-&kp LSHFT  &kp LC(Z)  &kp LC(X)    &kp LC(C)     &trans         &kp LC(V)      &trans       &trans       &trans     &trans        &trans     &Lock_Screen
-                                   &trans        &none          &trans         &spotlight   &mo 4        &trans
+&kp TAB    &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &trans      &trans       &Mute_BT1  &vol_up    &vol_down  &kp DELETE
+&kp LALT   &kp LC(A)  &kp LC(S)    &kp ASTERISK  &kp AMPERSAND  &kp CARET      &prev_app   &globe_down  &globe_up  &next_app  &trans     &home_screen
+&kp LSHFT  &kp LC(Z)  &kp LC(X)    &kp LC(C)     &trans         &kp LC(V)      &trans      &trans       &trans     &trans     &trans     &lock_screen
+                                   &trans        &none          &trans         &spotlight  &mo 4        &trans
             >;
         };
 
