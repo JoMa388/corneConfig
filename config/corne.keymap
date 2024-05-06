@@ -136,6 +136,21 @@
 
             label = "LOCK_SCREEN";
         };
+
+        wake_up: wake_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&out OUT_BLE>,
+                <&macro_wait_time 20>,
+                <&kp SPACE>,
+                <&macro_wait_time 20>,
+                <&kp SPACE>,
+                <&macro_wait_time 20>,
+                <&out OUT_USB>;
+
+            label = "WAKE_UP";
+        };
     };
 
     keymap {
@@ -155,7 +170,7 @@
 &kp TAB    &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &trans      &trans       &Mute_BT1  &vol_up    &vol_down  &kp DELETE
 &kp LALT   &kp LC(A)  &kp LC(S)    &kp ASTERISK  &kp AMPERSAND  &kp CARET      &prev_app   &globe_down  &globe_up  &next_app  &trans     &home_screen
 &kp LSHFT  &kp LC(Z)  &kp LC(X)    &kp LC(C)     &trans         &kp LC(V)      &trans      &trans       &trans     &trans     &trans     &lock_screen
-                                   &trans        &none          &trans         &spotlight  &mo 4        &trans
+                                   &trans        &none          &trans         &spotlight  &mo 4        &wake_up
             >;
         };
 
