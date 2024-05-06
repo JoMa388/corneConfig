@@ -32,7 +32,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT &kp L>,
+                <&kp C_POWER>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
@@ -66,7 +66,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp GLOBE &kp LEFT>,
+                <&kp LC(LEFT)>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
@@ -79,7 +79,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp GLOBE &kp RIGHT>,
+                <&kp LC(RIGHT)>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
@@ -92,7 +92,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp GLOBE &kp UP_ARROW>,
+                <&kp LC(UP_ARROW)>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
@@ -105,7 +105,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp GLOBE &kp DOWN>,
+                <&kp LC(DOWN)>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
