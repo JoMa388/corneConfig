@@ -130,7 +130,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp LG(C_VOL_DN)>,
+                <&kp LG(LC(Q))>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
