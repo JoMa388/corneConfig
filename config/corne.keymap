@@ -52,7 +52,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp GLOBE &kp LEFT>,
+                <&kp RA(LEFT)>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
@@ -65,7 +65,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp GLOBE &kp RIGHT_ARROW>,
+                <&kp RA(RIGHT_ARROW)>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
@@ -78,7 +78,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp GLOBE &kp UP>,
+                <&kp RA(UP)>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
@@ -91,7 +91,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp GLOBE &kp DOWN>,
+                <&kp RA(DOWN)>,
                 <&macro_wait_time 20>,
                 <&out OUT_USB>;
 
@@ -127,7 +127,13 @@
         lock_screen: lock_screen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LG(Q))>;
+            bindings =
+                <&out OUT_BLE>,
+                <&macro_wait_time 20>,
+                <&kp LG(C_VOL_DN)>,
+                <&macro_wait_time 20>,
+                <&out OUT_USB>;
+
             label = "LOCK_SCREEN";
         };
     };
