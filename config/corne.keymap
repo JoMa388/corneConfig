@@ -151,8 +151,8 @@
         Macro_Layer {
             bindings = <
 <<<<<<< HEAD
-&trans  &trans  &trans              &mmv MOVE_Y(1000)   &trans             &trans                 &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &trans
-&trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(-1000)  &mmv MOVE_X(1000)  &trans                 &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT     &kp F18       &trans
+&trans  &trans  &trans              &mmv MOVE_Y(500)   &trans             &trans                 &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &trans
+&trans  &trans  &mmv MOVE_X(-500)  &mmv MOVE_Y(-500)  &mmv MOVE_X(500)  &trans                 &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT     &kp F18       &trans
 &trans  &trans  &trans              &trans              &trans             &trans                 &kp LS(LG(LEFT))  &kp F22   &kp F21       &kp F20       &kp F19       &trans
                                     &trans              &trans             &trans                 &trans            &trans    &trans
 =======
