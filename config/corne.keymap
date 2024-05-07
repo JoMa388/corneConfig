@@ -15,14 +15,14 @@
         Mute_BT1: Mute_BT1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp C_MUTE  &bt BT_SEL 2 &out OUT_USB>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp C_MUTE &bt BT_SEL 0 &out OUT_USB>;
             label = "MUTE_BT1";
         };
 
         home_screen: home_screen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE  &bt BT_SEL 1 &kp LG(H)  &bt BT_SEL 2 &out OUT_USB>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp LG(H) &bt BT_SEL 0 &out OUT_USB>;
             label = "HOME_SCREEN";
         };
 
@@ -36,84 +36,84 @@
         prev_app: globe_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp RA(LEFT)  &bt BT_SEL 2 &out OUT_USB>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp RA(LEFT) &bt BT_SEL 0 &out OUT_USB>;
             label = "GLOBE_LEFT";
         };
 
         next_app: globe_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp RA(RIGHT_ARROW) &out OUT_USB>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp RA(RIGHT_ARROW) &bt BT_SEL 0 &out OUT_USB>;
             label = "GLOBE_RIGHT";
         };
 
         mission_comtrol: globe_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp RA(UP)>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp RA(UP)>;
             label = "GLOBE_UP";
         };
 
         globe_down: globe_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp RA(DOWN) &out OUT_USB>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp RA(DOWN)>;
             label = "GLOBE_DOWN";
         };
 
         vol_up: vol_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp C_VOLUME_UP &out OUT_USB>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp C_VOLUME_UP &bt BT_SEL 0 &out OUT_USB>;
             label = "VOL_UP";
         };
 
         vol_down: vol_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp C_VOL_DN &out OUT_USB>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp C_VOL_DN &bt BT_SEL 0 &out OUT_USB>;
             label = "VOL_DOWN";
         };
 
         lock_screen: lock_screen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp LG(LC(Q)) &out OUT_USB>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp LG(LC(Q)) &bt BT_SEL 0 &out OUT_USB>;
             label = "LOCK_SCREEN";
         };
 
         wake_up: wake_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp SPACE &kp SPACE &out OUT_USB>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp SPACE &kp SPACE &bt BT_SEL 0 &out OUT_USB>;
             label = "WAKE_UP";
         };
 
         messeger: messeger {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp LG(SPACE) &kp M &kp E &kp S &kp S &kp E &kp N &kp G &kp E &kp R &kp ENTER>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp LG(SPACE) &kp M &kp E &kp S &kp S &kp E &kp N &kp G &kp E &kp R &kp ENTER>;
             label = "MESSEGER";
         };
 
         obsidian: obsidian {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp LG(SPACE) &kp O &kp B &kp S &kp I &kp D &kp I &kp A &kp N &kp ENTER>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp LG(SPACE) &kp O &kp B &kp S &kp I &kp D &kp I &kp A &kp N &kp ENTER>;
             label = "OBSIDIAN";
         };
 
         twitch: twitch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp LG(SPACE) &kp T &kp W &kp I &kp T &kp C &kp H &kp ENTER>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp LG(SPACE) &kp T &kp W &kp I &kp T &kp C &kp H &kp ENTER>;
             label = "TWITCH";
         };
 
         youtube: youtube {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp LG(SPACE) &kp Y &kp O &kp U &kp T &kp U &kp B &kp E &kp ENTER>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &kp LG(SPACE) &kp Y &kp O &kp U &kp T &kp U &kp B &kp E &kp ENTER>;
             label = "YOUTUBE";
         };
     };
@@ -150,7 +150,7 @@
 
         Macro_Layer {
             bindings = <
-&trans  &trans  &trans  &trans &trans  &trans    &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &kp F21
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &kp F21
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT     &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LS(LG(LEFT))  &kp F18   &kp F19       &kp F20       &trans        &trans
                         &trans  &trans  &trans    &trans            &trans    &trans
@@ -159,10 +159,17 @@
 
         mouse_layer {
             bindings = <
+<<<<<<< HEAD
 &soft_off    &trans        &msc MOVE_LEFT          &mmv MOVE_Y(-1500)    &msc MOVE_RIGHT           &msc MOVE_UP      &trans        &trans     &trans     &trans  &trans  &trans
 &bootloader  &trans        &mmv MOVE_X(-1500)      &mmv MOVE_Y(1500)     &mmv MOVE_X(1500)         &msc MOVE_DOWN    &out OUT_TOG  &mkp LCLK  &mkp RCLK  &trans  &trans  &bootloader
 &bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3            &bt BT_SEL 2          &bt BT_SEL 1              &bt BT_SEL 0      &trans        &trans     &trans     &trans  &trans  &trans
                                                    &trans                &trans                    &out OUT_TOG      &trans        &trans     &trans
+=======
+&soft_off    &trans        &msc MOVE_LEFT  &trans        &msc MOVE_RIGHT  &msc MOVE_UP      &trans        &trans     &trans     &trans  &trans  &trans
+&bootloader  &trans        &trans          &trans        &trans           &msc MOVE_DOWN    &out OUT_TOG  &mkp LCLK  &mkp RCLK  &trans  &trans  &bootloader
+&bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3    &bt BT_SEL 2  &bt BT_SEL 1     &bt BT_SEL 0      &trans        &trans     &trans     &trans  &trans  &trans
+                                           &trans        &trans           &out OUT_TOG      &trans        &trans     &trans
+>>>>>>> d10b3883fd50c1363e24573fe189b93d4dc7efb5
             >;
         };
     };
