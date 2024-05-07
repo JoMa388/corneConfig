@@ -2,4 +2,4 @@
 
 # Battery Life Chart
 
-![Battery](Battery.jpg)
+![Battery](Battery.JPG)
