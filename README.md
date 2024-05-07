@@ -1,1 +1,1 @@
-![[corne_keymap.png]]
+![Corne](corne_keymap.png)
