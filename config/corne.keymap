@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
@@ -16,14 +15,106 @@
         Mute_BT1: Mute_BT1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&out OUT_BLE>,
-                <&macro_wait_time 20>,
-                <&kp C_MUTE>,
-                <&macro_wait_time 20>,
-                <&out OUT_USB>;
-
+            bindings = <&out OUT_BLE &kp C_MUTE &out OUT_USB>;
             label = "MUTE_BT1";
+        };
+
+        home_screen: home_screen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp LG(H) &out OUT_USB>;
+            label = "HOME_SCREEN";
+        };
+
+        spotlight: spotlight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp LG(SPACE)>;
+            label = "SPOTLIGHT";
+        };
+
+        prev_app: globe_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp RA(LEFT) &out OUT_USB>;
+            label = "GLOBE_LEFT";
+        };
+
+        next_app: globe_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp RA(RIGHT_ARROW) &out OUT_USB>;
+            label = "GLOBE_RIGHT";
+        };
+
+        mission_comtrol: globe_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp RA(UP)>;
+            label = "GLOBE_UP";
+        };
+
+        globe_down: globe_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp RA(DOWN) &out OUT_USB>;
+            label = "GLOBE_DOWN";
+        };
+
+        vol_up: vol_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp C_VOLUME_UP &out OUT_USB>;
+            label = "VOL_UP";
+        };
+
+        vol_down: vol_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp C_VOL_DN &out OUT_USB>;
+            label = "VOL_DOWN";
+        };
+
+        lock_screen: lock_screen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp LG(LC(Q)) &out OUT_USB>;
+            label = "LOCK_SCREEN";
+        };
+
+        wake_up: wake_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp SPACE &kp SPACE &out OUT_USB>;
+            label = "WAKE_UP";
+        };
+
+        messeger: messeger {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp LG(SPACE) &kp M &kp E &kp S &kp S &kp E &kp N &kp G &kp E &kp R &kp ENTER>;
+            label = "MESSEGER";
+        };
+
+        obsidian: obsidian {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp LG(SPACE) &kp O &kp B &kp S &kp I &kp D &kp I &kp A &kp N &kp ENTER>;
+            label = "OBSIDIAN";
+        };
+
+        twitch: twitch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp LG(SPACE) &kp T &kp W &kp I &kp T &kp C &kp H &kp ENTER>;
+            label = "TWITCH";
+        };
+
+        youtube: youtube {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp LG(SPACE) &kp Y &kp O &kp U &kp T &kp U &kp B &kp E &kp ENTER>;
+            label = "YOUTUBE";
         };
     };
 
@@ -41,10 +132,10 @@
 
         symbol_layer {
             bindings = <
-&kp TAB    &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &trans   &trans  &Mute_BT1  &trans  &trans  &kp DELETE
-&kp LALT   &kp LC(A)  &kp LC(S)    &kp ASTERISK  &kp AMPERSAND  &kp CARET      &trans   &trans  &trans     &trans  &trans  &trans
-&kp LSHFT  &kp LC(Z)  &kp LC(X)    &kp LC(C)     &trans         &kp LC(V)      &trans   &trans  &trans     &trans  &trans  &trans
-                                   &trans        &none          &trans         &kp RET  &mo 4   &trans
+&kp TAB    &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &trans      &trans       &Mute_BT1         &vol_up    &vol_down  &kp DELETE
+&kp LALT   &kp LC(A)  &kp LC(S)    &kp ASTERISK  &kp AMPERSAND  &kp CARET      &prev_app   &globe_down  &mission_comtrol  &next_app  &trans     &home_screen
+&kp LSHFT  &kp LC(Z)  &kp LC(X)    &kp LC(C)     &trans         &kp LC(V)      &messeger   &obsidian    &twitch           &youtube   &trans     &lock_screen
+                                   &out OUT_USB  &none          &trans         &spotlight  &mo 4        &wake_up
             >;
         };
 
@@ -59,16 +150,27 @@
 
         Macro_Layer {
             bindings = <
+<<<<<<< HEAD
 &trans  &trans  &trans              &mmv MOVE_y(1000)   &trans             &trans                 &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &trans
 &trans  &trans  &mmv MOVE_x(-1000)  &mmv MOVE_y(-1000)  &mmv MOVE_x(1000)  &trans                 &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT     &kp F18       &trans
 &trans  &trans  &trans              &trans              &trans             &trans                 &kp LS(LG(LEFT))  &kp F22   &kp F21       &kp F20       &kp F19       &trans
                                     &trans              &trans             &trans                 &trans            &trans    &trans
+=======
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &kp F21
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT     &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(LG(LEFT))  &kp F18   &kp F19       &kp F20       &trans        &trans
+                        &trans  &trans  &trans    &trans            &trans    &trans
+>>>>>>> d2b7aa1340bdf1a55067f252ee3c72635acac94f
             >;
         };
 
         mouse_layer {
             bindings = <
+<<<<<<< HEAD
 &soft_off    &trans        &msc MOVE_LEFT  &mmv MOVE_UP    &msc MOVE_RIGHT  &msc MOVE_UP      &bl BL_TOG    &trans     &trans     &trans  &trans  &trans
+=======
+&soft_off    &trans        &trans          &mmv MOVE_UP    &trans           &msc MOVE_UP      &trans        &trans     &trans     &trans  &trans  &trans
+>>>>>>> d2b7aa1340bdf1a55067f252ee3c72635acac94f
 &bootloader  &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_DOWN    &out OUT_TOG  &mkp LCLK  &mkp RCLK  &trans  &trans  &bootloader
 &bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1     &bt BT_SEL 0      &trans        &trans     &trans     &trans  &trans  &trans
                                            &trans          &trans           &out OUT_TOG      &trans        &trans     &trans
