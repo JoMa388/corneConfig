@@ -203,9 +203,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp LG(SPACE)>,
-                <&macro_wait_time 10>,
-                <&kp Y &kp O &kp U &kp T &kp U &kp B &kp E>,
+                <&kp LG(SPACE) &kp Y &kp O &kp U &kp T &kp U &kp B &kp E>,
                 <&macro_wait_time 20>,
                 <&kp ENTER>;
 
