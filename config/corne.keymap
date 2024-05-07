@@ -150,16 +150,15 @@
 
         Macro_Layer {
             bindings = <
-&trans  &trans  &trans              &mmv MOVE_Y(500)   &trans             &trans                 &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &trans
-&trans  &trans  &mmv MOVE_X(-500)  &mmv MOVE_Y(-500)  &mmv MOVE_X(500)  &trans                 &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT     &kp F18       &trans
-&trans  &trans  &trans              &trans              &trans             &trans                 &kp LS(LG(LEFT))  &kp F22   &kp F21       &kp F20       &kp F19       &trans
-                                    &trans              &trans             &trans                 &trans            &trans    &trans
+&trans  &trans  &trans  &mmv MOVE_Y(1000)  &trans  &trans    &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &kp F21
+&trans  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(-1000)  &mmv MOVE_X(1000)  &trans    &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT     &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(LG(LEFT))  &kp F18   &kp F19       &kp F20       &trans        &trans
+                        &trans  &trans  &trans    &trans            &trans    &trans
             >;
         };
 
         mouse_layer {
             bindings = <
-&soft_off    &trans        &msc MOVE_LEFT  &mmv MOVE_UP    &msc MOVE_RIGHT  &msc MOVE_UP      &bl BL_TOG    &trans     &trans     &trans  &trans  &trans
 &soft_off    &trans        &trans          &mmv MOVE_UP    &trans           &msc MOVE_UP      &trans        &trans     &trans     &trans  &trans  &trans
 &bootloader  &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_DOWN    &out OUT_TOG  &mkp LCLK  &mkp RCLK  &trans  &trans  &bootloader
 &bt BT_CLR   &bt BT_SEL 4  &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1     &bt BT_SEL 0      &trans        &trans     &trans     &trans  &trans  &trans
