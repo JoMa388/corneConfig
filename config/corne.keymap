@@ -16,11 +16,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&out OUT_BLE>,
-                <&macro_wait_time 10>,
-                <&bt BT_SEL 1 &kp C_MUTE>,
-                <&macro_wait_time 10>,
-                <&bt BT_SEL 2 &out OUT_USB>;
+                <&out OUT_BLE &bt BT_SEL 1>,
+                <&macro_wait_time 20>,
+                <&kp C_MUTE>,
+                <&macro_wait_time 20>,
+                <&bt BT_SEL 2>,
+                <&macro_wait_time 20>,
+                <&out OUT_USB>;
 
             label = "MUTE_BT1";
         };
@@ -126,7 +128,13 @@
         mute_bt: mute_bt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &kp C_MUTE &out OUT_USB>;
+            bindings =
+                <&out OUT_BLE>,
+                <&macro_wait_time 20>,
+                <&kp C_MUTE>,
+                <&macro_wait_time 20>,
+                <&out OUT_USB>;
+
             label = "MUTE_BT";
         };
     };
