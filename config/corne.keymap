@@ -15,17 +15,7 @@
         Mute_BT1: Mute_BT1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&out OUT_BLE>,
-                <&macro_wait_time 20>,
-                <&bt BT_SEL 1>,
-                <&macro_wait_time 20>,
-                <&kp C_MUTE>,
-                <&macro_wait_time 20>,
-                <&bt BT_SEL 2>,
-                <&macro_wait_time 20>,
-                <&out OUT_USB>;
-
+            bindings = <&out OUT_BLE &bt BT_SEL 0 &kp C_MUTE &bt BT_SEL 1 &out OUT_USB>;
             label = "MUTE_BT1";
         };
 
