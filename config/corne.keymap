@@ -158,9 +158,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp LG(SPACE)>,
-                <&macro_wait_time 10>,
-                <&kp M &kp E &kp S &kp S &kp E &kp N &kp G &kp E &kp R>,
+                <&kp LG(SPACE) &kp M &kp E &kp S &kp S &kp E &kp N &kp G &kp E &kp R>,
                 <&macro_wait_time 20>,
                 <&kp ENTER>;
 
@@ -173,9 +171,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp LG(SPACE)>,
-                <&macro_wait_time 10>,
-                <&kp O &kp B &kp S &kp I &kp D &kp I &kp A &kp N>,
+                <&kp LG(SPACE) &kp O &kp B &kp S &kp I &kp D &kp I &kp A &kp N>,
                 <&macro_wait_time 20>,
                 <&kp ENTER>;
 
@@ -188,9 +184,7 @@
             bindings =
                 <&out OUT_BLE>,
                 <&macro_wait_time 20>,
-                <&kp LG(SPACE)>,
-                <&macro_wait_time 10>,
-                <&kp T &kp W &kp I &kp T &kp C &kp H>,
+                <&kp LG(SPACE) &kp T &kp W &kp I &kp T &kp C &kp H>,
                 <&macro_wait_time 20>,
                 <&kp ENTER>;
 
@@ -202,7 +196,7 @@
             #binding-cells = <0>;
             bindings =
                 <&out OUT_BLE>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 5>,
                 <&kp LG(SPACE) &kp Y &kp O &kp U &kp T &kp U &kp B &kp E>,
                 <&macro_wait_time 20>,
                 <&kp ENTER>;
