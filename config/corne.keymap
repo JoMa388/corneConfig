@@ -142,7 +142,7 @@
 
         symbol_layer {
             bindings = <
-&kp TAB    &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &trans      &mute_bt     &Mute_BT1         &vol_up    &vol_down  &kp DELETE
+&kp TAB    &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &trans      &trans       &Mute_BT1         &vol_up    &vol_down  &kp DELETE
 &kp LALT   &kp LC(A)  &kp LC(S)    &kp ASTERISK  &kp AMPERSAND  &kp CARET      &prev_app   &globe_down  &mission_comtrol  &next_app  &trans     &home_screen
 &kp LSHFT  &kp LC(Z)  &kp LC(X)    &kp LC(C)     &trans         &kp LC(V)      &messeger   &obsidian    &twitch           &youtube   &trans     &lock_screen
                                    &out OUT_USB  &none          &trans         &spotlight  &mo 4        &wake_up
