@@ -16,10 +16,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&out OUT_BLE &bt BT_SEL 1>,
-                <&macro_wait_time 5>,
-                <&kp C_MUTE>,
-                <&macro_wait_time 1>,
+                <&out OUT_BLE>,
+                <&macro_wait_time 10>,
+                <&bt BT_SEL 1 &kp C_MUTE>,
+                <&macro_wait_time 10>,
                 <&bt BT_SEL 2 &out OUT_USB>;
 
             label = "MUTE_BT1";
@@ -121,6 +121,13 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &kp LG(SPACE) &kp Y &kp O &kp U &kp T &kp U &kp B &kp E &kp ENTER>;
             label = "YOUTUBE";
+        };
+
+        mute_bt: mute_bt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &kp C_MUTE &out OUT_USB>;
+            label = "MUTE_BT";
         };
     };
 
