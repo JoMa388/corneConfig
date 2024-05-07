@@ -151,6 +151,66 @@
 
             label = "WAKE_UP";
         };
+
+        messeger: messeger {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&out OUT_BLE>,
+                <&macro_wait_time 20>,
+                <&kp LG(SPACE)>,
+                <&macro_wait_time 10>,
+                <&kp M &kp E &kp S &kp S &kp E &kp N &kp G &kp E &kp R>,
+                <&macro_wait_time 20>,
+                <&kp ENTER>;
+
+            label = "MESSEGER";
+        };
+
+        obsidian: obsidian {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&out OUT_BLE>,
+                <&macro_wait_time 20>,
+                <&kp LG(SPACE)>,
+                <&macro_wait_time 10>,
+                <&kp O &kp B &kp S &kp I &kp D &kp I &kp A &kp N>,
+                <&macro_wait_time 20>,
+                <&kp ENTER>;
+
+            label = "OBSIDIAN";
+        };
+
+        twitch: twitch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&out OUT_BLE>,
+                <&macro_wait_time 20>,
+                <&kp LG(SPACE)>,
+                <&macro_wait_time 10>,
+                <&kp T &kp W &kp I &kp T &kp C &kp H>,
+                <&macro_wait_time 20>,
+                <&kp ENTER>;
+
+            label = "TWITCH";
+        };
+
+        youtube: youtube {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&out OUT_BLE>,
+                <&macro_wait_time 20>,
+                <&kp LG(SPACE)>,
+                <&macro_wait_time 10>,
+                <&kp Y &kp O &kp U &kp T &kp U &kp B &kp E>,
+                <&macro_wait_time 20>,
+                <&kp ENTER>;
+
+            label = "YOUTUBE";
+        };
     };
 
     keymap {
@@ -169,8 +229,8 @@
             bindings = <
 &kp TAB    &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DOLLAR     &kp PERCENT    &trans      &trans       &Mute_BT1  &vol_up    &vol_down  &kp DELETE
 &kp LALT   &kp LC(A)  &kp LC(S)    &kp ASTERISK  &kp AMPERSAND  &kp CARET      &prev_app   &globe_down  &globe_up  &next_app  &trans     &home_screen
-&kp LSHFT  &kp LC(Z)  &kp LC(X)    &kp LC(C)     &trans         &kp LC(V)      &trans      &trans       &trans     &trans     &trans     &lock_screen
-                                   &trans        &none          &trans         &spotlight  &mo 4        &wake_up
+&kp LSHFT  &kp LC(Z)  &kp LC(X)    &kp LC(C)     &trans         &kp LC(V)      &messeger   &obsidian    &twitch    &youtube   &trans     &lock_screen
+                                   &out OUT_USB  &none          &trans         &spotlight  &mo 4        &wake_up
             >;
         };
 
