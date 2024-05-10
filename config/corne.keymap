@@ -151,7 +151,7 @@
         Mouse_Macro {
             bindings = <
 &trans     &msc MOVE_LEFT  &msc MOVE_RIGHT    &mmv MOVE_Y(-1500)  &msc MOVE_UP       &msc MOVE_DOWN    &wake_up   &home_screen  &Mute_BT1         &vol_up    &vol_down  &lock_screen
-&trans     &trans          &mmv MOVE_X(-1500) &mmv MOVE_Y(1500)   &mmv MOVE_X(1500)  &mkp LCLK         &next_app  &globe_down   &mission_comtrol  &next_app  &wake_up   &home_screen
+&trans     &trans          &mmv MOVE_X(-1500) &mmv MOVE_Y(1500)   &mmv MOVE_X(1500)  &mkp LCLK         &prev_app  &globe_down   &mission_comtrol  &next_app  &wake_up   &home_screen
 &soft_off  &trans          &trans             &trans              &trans             &mkp RCLK         &messeger  &twitch       &obsidian         &youtube   &trans     &trans
                            &trans             &trans              &spotlight         &trans            &trans     &trans
             >;
