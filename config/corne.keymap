@@ -123,10 +123,10 @@
 
         default_layer {
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp F     &kp P      &kp B        &kp J         &kp L  &kp U      &kp Y    &kp BACKSPACE  &kp LC(BSPC)
+&kp TAB        &kp Q  &kp W  &kp F     &kp P      &kp B        &kp J         &kp L  &kp U      &kp Y    &kp SEMI       &kp BSPC
 &mt LCTRL ESC  &kp A  &kp R  &kp S     &kp T      &kp G        &kp M         &kp N  &kp E      &kp I    &kp O          &kp SQT
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp D      &kp V        &kp K         &kp H  &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
-                             &kp LGUI  &lt 1 RET  &kp SPACE    &out OUT_TOG  &mo 2  &mo 3
+                             &kp LGUI  &lt 1 RET  &kp SPACE    &none         &mo 2  &mo 3
             >;
         };
 
@@ -135,7 +135,7 @@
 &kp TAB     &kp N5        &kp N4        &kp N3        &kp N2        &kp N1          &kp PLUS   &kp LPAR  &kp RPAR      &kp UNDER  &trans    &kp DELETE
 &kp LALT    &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &kp EQUAL  &kp LBRC  &kp RBRC      &kp COLON  &kp SEMI  &kp PIPE
 &bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &kp MINUS  &kp LBKT  &kp RBKT      &kp UNDER  &trans    &kp BSLH
-                                        &trans        &none         &trans          &trans     &mo 3     &out OUT_TOG
+                                        &trans        &none         &trans          &trans     &mo 3     &trans
             >;
         };
 
@@ -153,7 +153,7 @@
 &trans     &msc MOVE_LEFT  &msc MOVE_RIGHT    &mmv MOVE_Y(-1500)  &msc MOVE_UP       &msc MOVE_DOWN    &wake_up   &home_screen  &Mute_BT1         &vol_up    &vol_down  &lock_screen
 &trans     &trans          &mmv MOVE_X(-1500) &mmv MOVE_Y(1500)   &mmv MOVE_X(1500)  &mkp LCLK         &prev_app  &globe_down   &mission_comtrol  &next_app  &wake_up   &home_screen
 &soft_off  &trans          &trans             &trans              &trans             &mkp RCLK         &messeger  &twitch       &obsidian         &youtube   &trans     &trans
-                           &trans             &trans              &spotlight         &trans            &trans     &trans
+                           &trans             &out OUT_TOG        &spotlight         &trans            &trans     &trans
             >;
         };
     };
