@@ -135,7 +135,7 @@
 &kp TAB     &kp N5        &kp N4        &kp N3        &kp N2        &kp N1          &kp PLUS   &kp LPAR  &kp RPAR      &kp UNDER  &trans    &kp DELETE
 &kp LALT    &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &kp EQUAL  &kp LBRC  &kp RBRC      &kp COLON  &kp SEMI  &kp PIPE
 &bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &kp MINUS  &kp LBKT  &kp RBKT      &kp UNDER  &trans    &kp BSLH
-                                        &OUT_TOG      &none         &trans          &trans     &trans     &trans
+                                        &out OUT_TOG      &none         &trans          &trans     &trans     &trans
             >;
         };
 
