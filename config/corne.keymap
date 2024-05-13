@@ -123,37 +123,37 @@
 
         default_layer {
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp F     &kp P      &kp B        &kp J      &kp L  &kp U      &kp Y    &kp SEMI  &kp BSPC
-&mt LCTRL ESC  &kp A  &kp R  &kp S     &kp T      &kp G        &kp M      &kp N  &kp E      &kp I    &kp O     &kp SQT
-&kp LSHFT      &kp Z  &kp X  &kp C     &kp D      &kp V        &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                             &kp LGUI  &lt 1 RET  &kp SPACE    &kp LSHFT  &mo 2  &mo 3
+&kp TAB        &kp Q  &kp W  &kp F     &kp P      &kp B        &kp J         &kp L  &kp U      &kp Y    &kp SEMI       &kp BSPC
+&mt LCTRL ESC  &kp A  &kp R  &kp S     &kp T      &kp G        &kp M         &kp N  &kp E      &kp I    &kp O          &kp SQT
+&kp LSHFT      &kp Z  &kp X  &kp C     &kp D      &kp V        &kp K         &kp H  &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
+                             &kp LGUI  &lt 1 RET  &kp SPACE    &kp LSHFT        &mo 2  &mo 3
             >;
         };
 
         Number_Symbol {
             bindings = <
-&kp TAB   &kp N1  &kp N2  &kp N3     &kp N4    &kp N5       &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT     &kp DELETE
-&kp LALT  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0       &kp LT        &kp GT        &kp ASTRK     &kp AMPS      &kp CARET     &bt BT_CLR
-&trans    &trans  &trans  &kp EQUAL  &bt PLUS  &kp MINUS    &kp EQUAL     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-                          &trans     &none     &trans       &out OUT_TOG  &trans        &trans
+&kp TAB     &kp N5        &kp N4        &kp N3        &kp N2        &kp N1          &kp PLUS   &kp LPAR  &kp RPAR      &kp UNDER  &trans    &kp DELETE
+&kp LALT    &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &kp EQUAL  &kp LBRC  &kp RBRC      &kp COLON  &kp SEMI  &kp PIPE
+&bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &kp MINUS  &kp LBKT  &kp RBKT      &kp UNDER  &trans    &kp BSLH
+                                        &out OUT_TOG      &none         &trans          &trans     &trans     &trans
             >;
         };
 
         Symbol_Vim {
             bindings = <
-&kp TILDE  &kp PIPE       &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &trans
-&kp GRAVE  &kp BACKSLASH  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp UNDER    &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT     &trans        &trans
-&trans     &trans         &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans       &kp LS(LG(LEFT))  &kp F18   &kp F19       &kp F20       &trans        &kp F21
-                                  &trans                &trans                 &trans       &trans            &none     &trans
+&kp TILDE  &kp PERCENT  &kp DOLLAR  &kp HASH   &kp AT  &kp EXCL    &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &trans
+&kp GRAVE  &kp CARET    &kp AMPS    &kp ASTRK  &kp LT  &kp GT      &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT     &trans        &trans
+&trans     &trans       &trans      &trans     &trans  &trans      &kp LS(LG(LEFT))  &kp F18   &kp F19       &kp F20       &trans        &kp F21
+                                    &trans     &trans  &trans      &trans            &trans    &trans
             >;
         };
 
         Mouse_Macro {
             bindings = <
-&trans     &msc MOVE_LEFT  &msc MOVE_RIGHT  &trans  &msc MOVE_DOWN    &msc MOVE_UP    &wake_up   &home_screen  &Mute_BT1         &vol_up    &vol_down  &lock_screen
-&trans     &trans          &trans           &trans  &trans            &mkp LCLK         &prev_app  &globe_down   &mission_comtrol  &next_app  &wake_up   &home_screen
-&soft_off  &trans          &trans           &trans  &trans            &mkp RCLK         &messeger  &twitch       &obsidian         &youtube   &trans     &trans
-                                            &trans  &trans            &spotlight        &trans     &trans        &trans
+&trans     &msc MOVE_LEFT  &msc MOVE_RIGHT    &mmv MOVE_Y(-1500)  &msc MOVE_UP       &msc MOVE_DOWN    &wake_up   &home_screen  &Mute_BT1         &vol_up    &vol_down  &lock_screen
+&trans     &trans          &mmv MOVE_X(-1500) &mmv MOVE_Y(1500)   &mmv MOVE_X(1500)  &mkp LCLK         &prev_app  &globe_down   &mission_comtrol  &next_app  &wake_up   &home_screen
+&soft_off  &trans          &trans             &trans              &trans             &mkp RCLK         &messeger  &twitch       &obsidian         &youtube   &trans     &trans
+                           &trans             &out OUT_TOG        &spotlight         &trans            &trans     &trans
             >;
         };
     };
