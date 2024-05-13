@@ -132,26 +132,26 @@
 
         Number_Symbol {
             bindings = <
-&kp TAB     &kp N5        &kp N4        &kp N3        &kp N2        &kp N1          &kp PLUS   &kp LPAR  &kp RPAR      &kp UNDER  &trans    &kp DELETE
-&kp LALT    &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &kp EQUAL  &kp LBRC  &kp RBRC      &kp COLON  &kp SEMI  &kp PIPE
-&bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &kp MINUS  &kp LBKT  &kp RBKT      &kp UNDER  &trans    &kp BSLH
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp MINUS   &kp LPAR  &kp RPAR      &kp UNDER  &trans    &kp DELETE
+&kp LALT    &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &kp EQUAL   &kp LBRC  &kp RBRC      &kp COLON  &kp SEMI  &kp PIPE
+&trans      &trans        &kp UNDER     &kp RET       &bt PLUS      &kp MINUS       &kp PLUS    &kp LBKT  &kp RBKT      &kp UNDER  &trans    &kp BSLH
                                         &out OUT_TOG      &none         &trans          &trans     &trans     &trans
             >;
         };
 
         Symbol_Vim {
             bindings = <
-&kp TILDE  &kp PERCENT  &kp DOLLAR  &kp HASH   &kp AT  &kp EXCL    &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &trans
-&kp GRAVE  &kp CARET    &kp AMPS    &kp ASTRK  &kp LT  &kp GT      &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT     &trans        &trans
-&trans     &trans       &trans      &trans     &trans  &trans      &kp LS(LG(LEFT))  &kp F18   &kp F19       &kp F20       &trans        &kp F21
+&kp TILDE  &kp PERCENT    &kp DOLLAR    &kp HASH      &kp AT        &kp EXCL        &kp F13           &kp F14   &kp C_MUTE    &kp C_VOL_UP  &kp C_VOL_DN  &trans
+&kp GRAVE  &kp CARET      &kp AMPS      &kp ASTRK     &kp LT        &kp GT          &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT     &trans        &trans
+&bt BT_CLR &bt BT_SEL 4   &bt BT_SEL 3  &BT_SEL 2     &BT_SEL 1     &bt BT_SEL 0    &kp LS(LG(LEFT))  &kp F18   &kp F19       &kp F20       &trans        &kp F21
                                     &trans     &trans  &trans      &trans            &trans    &trans
             >;
         };
 
         Mouse_Macro {
             bindings = <
-&trans     &msc MOVE_LEFT  &msc MOVE_RIGHT    &mmv MOVE_Y(-1500)  &msc MOVE_UP       &msc MOVE_DOWN    &wake_up   &home_screen  &Mute_BT1         &vol_up    &vol_down  &lock_screen
-&trans     &trans          &mmv MOVE_X(-1500) &mmv MOVE_Y(1500)   &mmv MOVE_X(1500)  &mkp LCLK         &prev_app  &globe_down   &mission_comtrol  &next_app  &wake_up   &home_screen
+&trans     &msc MOVE_LEFT  &msc MOVE_RIGHT    &trans  &msc MOVE_UP       &msc MOVE_DOWN    &wake_up   &home_screen  &Mute_BT1         &vol_up    &vol_down  &lock_screen
+&trans     &trans          &trans &trans   &trans &mkp LCLK         &prev_app  &globe_down   &mission_comtrol  &next_app  &wake_up   &home_screen
 &soft_off  &trans          &trans             &trans              &trans             &mkp RCLK         &messeger  &twitch       &obsidian         &youtube   &trans     &trans
                            &trans             &out OUT_TOG        &spotlight         &trans            &trans     &trans
             >;
